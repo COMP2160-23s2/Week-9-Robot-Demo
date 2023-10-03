@@ -8,7 +8,7 @@ public class YesAndNo : MonoBehaviour
     private PlayerActions playerActions;
     private InputAction yesAction;
     private InputAction noAction;
-    private int yesCount;
+    private int yesCount = 0;
     public int YesCount
     {
         get
@@ -50,8 +50,9 @@ public class YesAndNo : MonoBehaviour
     private void SayYes(InputAction.CallbackContext context)
     {
         Debug.Log("Yes!");
-        DoYes?.Invoke();
         yesCount ++;
+        DoYes?.Invoke();
+
     }
 
     private void SayNo(InputAction.CallbackContext context)

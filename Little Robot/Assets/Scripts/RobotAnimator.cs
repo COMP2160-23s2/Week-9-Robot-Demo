@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotAnimation : MonoBehaviour
+public class RobotAnimator : MonoBehaviour
 {
     private Animator animator;
     private YesAndNo yesAndNo;
@@ -19,8 +19,8 @@ public class RobotAnimation : MonoBehaviour
     void YesAnimate()
     {
         animator.SetTrigger("Yes");
-        int yesCount = yesAndNo.YesCount;
-        animator.SetInteger("YesCount", yesCount);
+        int yeses = yesAndNo.YesCount;
+        animator.SetInteger("YesCount", yeses);
     }
 
     void NoAnimate()
